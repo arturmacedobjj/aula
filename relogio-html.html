@@ -4,22 +4,20 @@
     <title>RELOGIO</title>
     <!-- <script src="relogio.js" type='text/javascript'></script> -->
 </head>
-<body>
+<body onload="time()">
     <div id="relogio"> 
-        qualquer
-        
     </div>
 </body>
 </html>
 <script>
     function time(){
-        var teste = document.getElementById("relogio");
+    var teste = document.getElementById("relogio");
     var relogio = new Date();
     h = relogio.getHours();
     m = relogio.getMinutes();
     s = relogio.getSeconds();
 
-    teste.innerHTML = ":" + h + ":" + m + ":" + s;
+    teste.innerHTML = h + ":" + m + ":" + s;
     setTimeout("time()", 1000);
     }
     
